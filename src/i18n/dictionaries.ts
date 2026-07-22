@@ -1,4 +1,26 @@
-export const en = {
+export type Lang = 'en' | 'fr';
+
+export interface Dict {
+  title: string;
+  tagline: string;
+  nav_home: string;
+  nav_counter: string;
+  nav_api: string;
+  counter_title: string;
+  counter_inc: string;
+  counter_dec: string;
+  counter_reset: string;
+  counter_current: string;
+  counter_doubled: string;
+  api_title: string;
+  api_intro: string;
+  api_button: string;
+  api_repo_label: string;
+  api_loading: string;
+  lang_switch: string;
+}
+
+export const en: Dict = {
   title: 'Skilluv starter — React',
   tagline: 'React 19 + Vite 6 + Tailwind v4 + TanStack Query + React Router 7.',
   nav_home: 'Home',
@@ -17,9 +39,9 @@ export const en = {
   api_repo_label: 'Public repository stars',
   api_loading: 'Loading…',
   lang_switch: 'FR',
-} as const;
+};
 
-export const fr = {
+export const fr: Dict = {
   title: 'Starter Skilluv — React',
   tagline: 'React 19 + Vite 6 + Tailwind v4 + TanStack Query + React Router 7.',
   nav_home: 'Accueil',
@@ -38,8 +60,6 @@ export const fr = {
   api_repo_label: 'Étoiles du repo public',
   api_loading: 'Chargement…',
   lang_switch: 'EN',
-} as const satisfies typeof en;
+};
 
-export type Dict = typeof en;
-export type Lang = 'en' | 'fr';
 export const dictionaries: Record<Lang, Dict> = { en, fr };

@@ -3,7 +3,9 @@ import { expect, test } from '@playwright/test';
 test('home renders title and nav', async ({ page }) => {
   await page.goto('/');
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
-  await expect(page.getByRole('link', { name: /counter/i })).toBeVisible();
+  // Scope to <nav> — the home page also has a "Counter" link in a card.
+  const nav = page.getByRole('navigation');
+  await expect(nav.getByRole('link', { name: /counter/i })).toBeVisible();
 });
 
 test('counter increments', async ({ page }) => {
