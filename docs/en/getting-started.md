@@ -19,17 +19,17 @@ Vite dev server on <http://localhost:5173> with HMR.
 
 ## Scripts
 
-| Command | Purpose |
-|---|---|
-| `npm run dev` | Vite dev server, HMR |
-| `npm run build` | Production build (Vite) |
-| `npm run preview` | Serve `dist/` on :4173 |
-| `npm run typecheck` | `tsc --noEmit` |
-| `npm run lint` | ESLint + Prettier |
-| `npm run format` | Prettier auto-fix |
-| `npm run test:unit` | Vitest |
-| `npm run test:e2e` | Playwright (build → preview → tests) |
-| `npm run test` | unit + e2e |
+| Command             | Purpose                              |
+| ------------------- | ------------------------------------ |
+| `npm run dev`       | Vite dev server, HMR                 |
+| `npm run build`     | Production build (Vite)              |
+| `npm run preview`   | Serve `dist/` on :4173               |
+| `npm run typecheck` | `tsc --noEmit`                       |
+| `npm run lint`      | ESLint + Prettier                    |
+| `npm run format`    | Prettier auto-fix                    |
+| `npm run test:unit` | Vitest                               |
+| `npm run test:e2e`  | Playwright (build → preview → tests) |
+| `npm run test`      | unit + e2e                           |
 
 ## Deploying
 
